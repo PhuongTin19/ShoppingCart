@@ -42,34 +42,7 @@ public class CartApi {
 		session.set(SessionConst.CURRENT_CART, currentCart);
 		return ResponseEntity.ok(currentCart);
 	}
-	
-	
-	//localhost:8080/api/cart/updateCart?productId={...}&quantity={...}&isReplace={...}
-//	@GetMapping("/updateCart")
-//	public ResponseEntity<?> doGetUpdateCart(CartDto cart,@RequestParam("productId") Long productId,
-//			@RequestParam("quantity") Integer quantity,
-//			@RequestParam("isReplace") Boolean isReplace){
-//		//Lấy giỏ hàng từ session
-//		CartDto currentCart = (CartDto) session.get(SessionConst.CURRENT_CART);
-//		HashMap<Long, CartDetailDto>listDetail = cart.getListDetail();
-//		if(quantity > 0) { //Quantity lớn hơn 0 --> cập nhật
-//			// update
-//			if(isReplace) {
-//				//chưa có trong cart
-//				//Thay the sl cu = sl moi
-//				listDetail.get(productId).setQuantity(quantity);
-//			}else {
-//				//Đã có trong cart
-//				//cong don
-//				Integer oldQuantity = listDetail.get(productId).getQuantity();//Lay so luong cu
-//				Integer newQuantity = oldQuantity + quantity;//cong so luong moi
-//				listDetail.get(productId).setQuantity(newQuantity);//Thay so luong moi vao gio hang
-//			}
-//		}
-//		session.set(SessionConst.CURRENT_CART, currentCart);
-//		return ResponseEntity.ok(currentCart);
-//	}
-//	
+
 	@GetMapping("/checkout")
 	public ResponseEntity<?>doGetCheckOut(
 			@RequestParam("address") String address,

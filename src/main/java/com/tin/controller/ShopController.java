@@ -123,8 +123,7 @@ public class ShopController {
 	}
 
 	@RequestMapping("/search")
-	public String search(Model model, @RequestParam("keywords") Optional<String> kw,
-			@RequestParam("p") Optional<Integer> p) {
+	public String search(Model model, @RequestParam("keywords") Optional<String> kw) {
 
 		// Hiện ra tất cả các sản phẩm
 		List<Product> list = dao.findAllAvaiable();

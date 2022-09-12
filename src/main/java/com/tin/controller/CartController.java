@@ -38,6 +38,7 @@ public class CartController {
 	@GetMapping("/cart")
 	public String doGetViewCart() {
 		return "cart";
+		//Hhahahaaah
 	}
 	@GetMapping("/removeCart")
 	public String doGetRemove(@RequestParam("productId") Long productId){
